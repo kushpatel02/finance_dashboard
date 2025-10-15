@@ -1,4 +1,4 @@
-#AI-Powered Quantitative Investment Strategy Dashboard
+# AI-Powered Quantitative Investment Strategy Dashboard
 
 📖 Overview
 This project is an all-in-one, interactive web application for investment analysis, built with Streamlit. It serves as a powerful decision-support tool for investors by integrating real-time data fetching, AI-powered price prediction, news sentiment analysis, and sophisticated portfolio optimization into a single, user-friendly dashboard.
