@@ -1,41 +1,87 @@
 # AI-Powered Quantitative Investment Strategy Dashboard
 
-📖 Overview
-This project is an all-in-one, interactive web application for investment analysis, built with Streamlit. It serves as a powerful decision-support tool for investors by integrating real-time data fetching, AI-powered price prediction, news sentiment analysis, and sophisticated portfolio optimization into a single, user-friendly dashboard.
+An interactive, all-in-one web application for sophisticated investment analysis combining real-time market data, AI-powered price predictions, news sentiment analysis, and portfolio optimization. Built with Streamlit, this dashboard serves as a comprehensive decision-support tool for investors, demonstrating a full-stack approach to quantitative finance.
 
-This tool is designed to demonstrate a full-stack approach to quantitative finance, combining skills in data engineering, machine learning, natural language processing (NLP), and financial theory.
+## Overview
+This project bridges the gap between traditional financial analysis and modern machine learning techniques, providing investors with actionable insights through an intuitive web interface. The dashboard integrates multiple analytical approaches into a cohesive platform that supports both individual stock analysis and multi-asset portfolio construction.
 
-✨ Key Features
-This dashboard is divided into two main tools:
+## Key Capabilities:
+- Real-time stock data analysis with technical indicators
+- Machine learning-based price forecasting using XGBoost
+- NLP-powered sentiment analysis on financial news
+- Modern Portfolio Theory-based portfolio optimization
+- Interactive visualizations for data-driven decision making
 
-1. Single Stock Analysis
-Historical Data: Fetches and displays historical stock prices, company information, and technical indicators (like Simple Moving Averages).
+## Features:
+### 1. Single Stock Analysis
+#### 📊 Historical Data & Technical Analysis
 
-🚀 AI Price Prediction: Trains an XGBoost model on the fly to forecast future stock prices for a user-defined number of days.
+- Fetch real-time and historical stock prices using yfinance API
+- Display comprehensive company information (sector, industry, market cap)
+- Calculate and visualize Simple Moving Averages (SMA) for trend analysis
+- Interactive time-series charts with customizable date ranges
 
-📰 News Sentiment Analysis: Pulls the latest news headlines for a stock, and uses a pre-trained FinBERT model to analyze the sentiment (Positive, Negative, Neutral) of each headline, providing a high-level overview of market perception.
+#### 🤖 AI-Powered Price Prediction
 
-2. Portfolio Optimization
-Multi-Asset Analysis: Accepts a list of multiple stock tickers for analysis.
+- On-the-fly XGBoost model training on historical price data
+- User-defined forecast horizons (1-365 days)
+- Feature engineering with technical indicators and lag features
+- Visual comparison of predicted vs. historical prices
+- Confidence metrics and model performance statistics
 
-Modern Portfolio Theory (MPT): Calculates the optimal asset allocation to achieve the highest possible risk-adjusted return.
+#### 📰 News Sentiment Analysis
 
-Efficient Frontier: Utilizes the PyPortfolioOpt library to find the portfolio that maximizes the Sharpe Ratio.
+- Real-time financial news aggregation via NewsAPI
+- FinBERT-based sentiment classification (Positive, Negative, Neutral)
+- Sentiment scoring for each headline
+- Aggregated sentiment overview for market perception
+- Source attribution and publication timestamps
 
-Clear Recommendations: Displays the recommended portfolio weights in an intuitive pie chart, along with key performance metrics like Expected Annual Return, Volatility, and Sharpe Ratio.
+### 2. Portfolio Optimization
+#### 💼 Multi-Asset Portfolio Construction
 
-🛠️ Technologies Used
-Frontend & Dashboard: Streamlit
+- Simultaneous analysis of multiple stock tickers
+- Historical return and volatility calculations
+- Correlation matrix for diversification insights
+- Risk-return profile visualization
 
-Data Manipulation & Analysis: Pandas, NumPy
+#### 📈 Modern Portfolio Theory (MPT) Implementation
 
-Data Fetching: yfinance, requests (for NewsAPI)
+- Efficient Frontier calculation using PyPortfolioOpt
+- Maximum Sharpe Ratio optimization
+- Optimal asset allocation recommendations
+- Risk-adjusted return metrics
 
-Machine Learning (Prediction): Scikit-learn, XGBoost
+#### 📊 Portfolio Performance Metrics
 
-NLP (Sentiment Analysis): Hugging Face transformers, PyTorch
+- Expected Annual Return
+- Portfolio Volatility (Standard Deviation)
+- Sharpe Ratio (risk-adjusted performance)
+- Individual asset weight allocations
+- Interactive pie charts for visual weight distribution
 
-Financial Analysis (Optimization): PyPortfolioOpt
 
-Data Visualization: Plotly Express
+## Technology Stack
+#### Frontend & User Interface
+- Streamlit: Interactive web application framework with real-time updates
 
+#### Data Handling & Analysis
+- Pandas: Data manipulation and time-series analysis
+- NumPy: Numerical computations and array operations
+- yfinance: Real-time and historical financial data retrieval
+
+#### Machine Learning & AI
+- XGBoost: Gradient boosting for price prediction
+- Scikit-learn: Model evaluation and preprocessing
+- Hugging Face Transformers: Pre-trained FinBERT for sentiment analysis
+- PyTorch: Deep learning backend for NLP models
+
+#### Financial Analysis
+- PyPortfolioOpt: Portfolio optimization and efficient frontier calculation
+- Custom implementations of Modern Portfolio Theory
+
+#### Visualization
+- Plotly Express: Interactive, publication-quality charts and graphs
+
+#### External APIs
+- NewsAPI: Financial news headline aggregation
